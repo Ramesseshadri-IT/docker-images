@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ramesseshadriitdockerimages 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ramesseshadriitdockerimages
+  template:
+    metadata:
+      labels:
+        app: ramesseshadriitdockerimages 
+    spec:
+      containers:
+        - name: ramesseshadriitdockerimages 
+          image: rssitecoreacr.azurecr.io/ramesseshadriitdockerimages
+          ports:
+          - containerPort: 80
